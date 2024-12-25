@@ -1,3 +1,3 @@
 # Odin game test
 
-`odin run src --out:game.bin`
+`odin run src --out:client.bin`

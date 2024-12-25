@@ -7,8 +7,8 @@ World :: struct {
 }
 
 Entity :: struct {
-    x: u32,
-    y: u32,
+    x: f32,
+    y: f32,
 }
 
 Input :: struct {
@@ -47,16 +47,16 @@ input :: proc() -> Input {
 
 process :: proc(world: ^World, input: Input, delta: f32) {
     if input.up {
-        world.player.y -= 1
+        world.player.y -= 400 * delta
     }
     if input.down {
-        world.player.y += 1
+        world.player.y += 400 * delta
     }
     if input.left {
-        world.player.x -= 1
+        world.player.x -= 400 * delta
     }
     if input.right {
-        world.player.x += 1
+        world.player.x += 400 * delta
     }
 }
 
