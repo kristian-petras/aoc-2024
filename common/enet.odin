@@ -1,5 +1,0 @@
-package common
-
-test :: proc() {
-
-}

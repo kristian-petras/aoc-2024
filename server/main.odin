@@ -1,5 +1,6 @@
 package server
 
+import "../common"
 import "core:fmt"
 import en "vendor:ENet"
 
@@ -7,6 +8,7 @@ main :: proc() {
     address := en.Address{en.HOST_ANY, 12345}
     fmt.println("hello, im server")
 
+    common.test()
     en.initialize()
 
     server := en.host_create(&address, 32, 2, 0, 0)

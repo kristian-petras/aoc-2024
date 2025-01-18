@@ -1,14 +1,13 @@
-package tino
+package client
 
 import rl "vendor:raylib"
 
 World :: struct {
-    player: Entity,
+    scenes: []Scene,
 }
 
-Entity :: struct {
-    x: f32,
-    y: f32,
+Scene :: struct {
+    entities: []Entity,
 }
 
 Input :: struct {
@@ -16,6 +15,10 @@ Input :: struct {
     down:  bool,
     left:  bool,
     right: bool,
+}
+
+Test :: struct {
+    color: rl.Color,
 }
 
 main :: proc() {
